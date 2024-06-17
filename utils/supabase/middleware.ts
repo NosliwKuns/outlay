@@ -60,6 +60,8 @@ export const updateSession = async (request: NextRequest) => {
       },
     );
 
+    const data = await fetch(`http://localhost:800/api/users/me`,)
+
     // This will refresh session if expired - required for Server Components
     // https://supabase.com/docs/guides/auth/server-side/nextjs
     await supabase.auth.getUser();
